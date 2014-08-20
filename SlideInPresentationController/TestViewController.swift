@@ -24,26 +24,4 @@ class TestViewController: UIViewController, UIViewControllerTransitioningDelegat
         dismiss?()
     }
     
-    @IBAction func grow(sender: UIButton) {
-        preferredContentSize = CGSize(width: 320, height: 300)
-        sender.enabled = false
-    }
-    
-    // TODO: Remove these methods
-    //
-    func presentationControllerForPresentedViewController(presented: UIViewController!, presentingViewController presenting: UIViewController!, sourceViewController source: UIViewController!) -> UIPresentationController! {
-        
-        return SlideInPresentationController(presentedViewController: presented, presentingViewController: presenting)
-    }
-    
-    func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
-        
-        return SlideInAnimationController(isPresenting: true)
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
-        
-        return SlideInAnimationController(isPresenting: false)
-    }
-
 }

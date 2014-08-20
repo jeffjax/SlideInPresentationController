@@ -10,6 +10,17 @@ import UIKit
 
 class SlideInTransitioner : NSObject, UIViewControllerTransitioningDelegate {
     
+    private override init() {
+        super.init()
+    }
+    
+    class var sharedInstance : SlideInTransitioner {
+    struct Static {
+        static let instance = SlideInTransitioner()
+        }
+        return Static.instance
+    }
+    
     func presentationControllerForPresentedViewController(presented: UIViewController!, presentingViewController presenting: UIViewController!, sourceViewController source: UIViewController!) -> UIPresentationController! {
         
          return SlideInPresentationController(presentedViewController: presented, presentingViewController: presenting)

@@ -24,16 +24,10 @@ class MainViewController: UIViewController {
     func test() {
         
         let testVC = TestViewController(nibName: "TestViewController", bundle: nil)
-        let transitioner = SlideInTransitioner()
         
         if toggle.on {
             testVC.modalPresentationStyle = .Custom
-            
-            // TODO: Make the following line work
-            //  testVC.transitioningDelegate = transitioner
-            //
-            
-            testVC.transitioningDelegate = testVC
+            testVC.transitioningDelegate = SlideInTransitioner.sharedInstance
         }
         
         testVC.dismiss = {

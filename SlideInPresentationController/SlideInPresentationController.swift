@@ -75,7 +75,7 @@ class SlideInPresentationController: UIPresentationController {
         presentedViewController.view.frame = frameOfPresentedViewInContainerView()
     }
 
-    // ---- UIContentContainer protocol methods
+    // MARK: UIContentContainer protocol methods
 
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator transitionCoordinator: UIViewControllerTransitionCoordinator!) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: transitionCoordinator)
