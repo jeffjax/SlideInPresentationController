@@ -17,13 +17,17 @@ class TestViewController: UIViewController, UIViewControllerTransitioningDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        preferredContentSize = CGSize(width: 320, height: 150)
     }
 
     @IBAction func close(sender: AnyObject) {
         dismiss?()
     }
     
+    @IBAction func grow(sender: UIButton) {
+        preferredContentSize = CGSize(width: 320, height: 300)
+        sender.enabled = false
+    }
     
     // TODO: Remove these methods
     //
