@@ -69,6 +69,11 @@ class SlideInPresentationController: UIPresentationController {
         return CGSize(width: parentSize.width, height: parentSize.height / 3)
     }
 
+    override func containerViewWillLayoutSubviews() {
+        dimmingView.frame = containerView.bounds
+        presentedViewController.view.frame = frameOfPresentedViewInContainerView()
+    }
+
     // ---- UIContentContainer protocol methods
 
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator transitionCoordinator: UIViewControllerTransitionCoordinator!) {
