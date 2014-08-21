@@ -22,7 +22,7 @@ class ToolsViewController: UITableViewController {
         // calculate preferredContentSize
         //
         tableView.layoutIfNeeded()
-        preferredContentSize = tableView.contentSize
+        preferredContentSize = CGSize(width: 320, height: tableView.contentSize.height)
     }
 
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {

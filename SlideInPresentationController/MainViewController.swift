@@ -15,17 +15,21 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Test", style: .Plain, target: self, action: Selector("test"))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Test", style: .Plain, target: self, action: Selector("test:"))
         
         toggle.onTintColor = UIColor.lightGrayColor()
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: toggle)
     }
 
-    func test() {
+    func test(barButtonItem: UIBarButtonItem) {
         
         let toolsVC = ToolsViewController(nibName:nil, bundle: nil)
         
-        if toggle.on {
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            toolsVC.modalPresentationStyle = .Popover
+            toolsVC.popoverPresentationController.barButtonItem = barButtonItem
+           
+        } else if toggle.on {
             toolsVC.modalPresentationStyle = .Custom
             toolsVC.transitioningDelegate = SlideInTransitioner.sharedInstance
         }
