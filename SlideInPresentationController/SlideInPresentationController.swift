@@ -12,7 +12,7 @@ class SlideInPresentationController: UIPresentationController {
 
     lazy var dimmingView: UIView = {
         let view = UIView(frame: self.containerView!.bounds)
-        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         view.alpha = 0
         return view
     }()
