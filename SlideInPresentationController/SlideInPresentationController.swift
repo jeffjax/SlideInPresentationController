@@ -14,8 +14,13 @@ class SlideInPresentationController: UIPresentationController {
         let view = UIView(frame: self.containerView!.bounds)
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         view.alpha = 0
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dimmingViewTapped:")))
         return view
     }()
+
+    func dimmingViewTapped(gesture: UIGestureRecognizer) {
+        presentingViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     override func presentationTransitionWillBegin() {
 
