@@ -17,6 +17,7 @@
 		1F659E9C19A5188900C9577F /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F659E9A19A5188900C9577F /* TestViewController.xib */; };
 		1F659E9E19A51CE900C9577F /* SlideInTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F659E9D19A51CE900C9577F /* SlideInTransitioner.swift */; };
 		1F659EA019A51E2400C9577F /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F659E9F19A51E2400C9577F /* SlideInPresentationController.swift */; };
+		1F903F2019A56E2C006BCE48 /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903F1F19A56E2C006BCE48 /* ToolsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1F659E9A19A5188900C9577F /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		1F659E9D19A51CE900C9577F /* SlideInTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransitioner.swift; sourceTree = "<group>"; };
 		1F659E9F19A51E2400C9577F /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
+		1F903F1F19A56E2C006BCE48 /* ToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				1F659E9D19A51CE900C9577F /* SlideInTransitioner.swift */,
 				1F659E9F19A51E2400C9577F /* SlideInPresentationController.swift */,
 				1F3B0F9E19A5218600C5E3FB /* SlideInAnimationController.swift */,
+				1F903F1F19A56E2C006BCE48 /* ToolsViewController.swift */,
 			);
 			path = SlideInPresentationController;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				1F659E9E19A51CE900C9577F /* SlideInTransitioner.swift in Sources */,
 				1F659EA019A51E2400C9577F /* SlideInPresentationController.swift in Sources */,
 				1F659E9719A517A300C9577F /* MainViewController.swift in Sources */,
+				1F903F2019A56E2C006BCE48 /* ToolsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

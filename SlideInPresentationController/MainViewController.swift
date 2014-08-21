@@ -23,17 +23,17 @@ class MainViewController: UIViewController {
 
     func test() {
         
-        let testVC = TestViewController(nibName: "TestViewController", bundle: nil)
+        let toolsVC = ToolsViewController(nibName:nil, bundle: nil)
         
         if toggle.on {
-            testVC.modalPresentationStyle = .Custom
-            testVC.transitioningDelegate = SlideInTransitioner.sharedInstance
+            toolsVC.modalPresentationStyle = .Custom
+            toolsVC.transitioningDelegate = SlideInTransitioner.sharedInstance
         }
         
-        testVC.dismiss = {
+        toolsVC.dismiss = {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         
-        presentViewController(testVC, animated: true, completion: nil)
+        presentViewController(toolsVC, animated: true, completion: nil)
     }
 }
